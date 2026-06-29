@@ -1,0 +1,202 @@
+/* =========================
+   MASOUMEH THEME (FINAL)
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    font-family:'Vazirmatn',sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#eefbea,#ffffff);
+    position:relative;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+.background{
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left,#d6f8d0 0%,transparent 40%),
+    radial-gradient(circle at bottom right,#ffffff 0%,transparent 45%),
+    linear-gradient(135deg,#eefbea,#ffffff);
+    animation:bgMove 12s ease-in-out infinite alternate;
+    z-index:-2;
+}
+
+@keyframes bgMove{
+    from{transform:scale(1);}
+    to{transform:scale(1.12);}
+}
+
+/* =========================
+   CARD
+========================= */
+.card{
+    width:440px;
+    max-width:92%;
+    padding:45px;
+    text-align:center;
+    border-radius:35px;
+    background:rgba(255,255,255,.45);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.7);
+    box-shadow:0 15px 45px rgba(90,170,90,.12);
+    animation:fade .8s;
+    transition:.4s;
+}
+
+@keyframes fade{
+    from{ opacity:0; transform:translateY(40px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 50px rgba(90,170,90,.18);
+}
+
+/* =========================
+   TITLES & TEXT
+========================= */
+h1{
+    font-family:'Lalezar',cursive;
+    font-size:48px;
+    color:#3d8b4e;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#6c886d;
+    font-size:15px;
+    margin-bottom:22px;
+}
+
+.divider{
+    width:70px;
+    height:4px;
+    background:#72bf6f;
+    border-radius:20px;
+    margin:0 auto 25px;
+}
+
+.message{
+    line-height:2;
+    color:#404040;
+    font-size:16px;
+    margin-bottom:35px;
+}
+
+/* =========================
+   PLAYER
+========================= */
+.player{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    margin-bottom:25px;
+}
+
+.play-btn{
+    width:68px;
+    height:68px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:28px;
+    color:white;
+    background:linear-gradient(135deg,#6dc96f,#459f50);
+    transition:.35s;
+    box-shadow:0 10px 25px rgba(76,170,90,.35);
+    position:relative;
+    overflow:hidden;
+}
+
+.play-btn:hover{ transform:scale(1.08); }
+.play-btn:active{ transform:scale(.95); }
+
+.play-btn::after{
+    content:"";
+    position:absolute;
+    width:180%;
+    height:180%;
+    left:-40%;
+    top:-40%;
+    background:rgba(255,255,255,.18);
+    transform:rotate(45deg) translateX(-220px);
+    transition:.6s;
+}
+
+.play-btn:hover::after{ transform:rotate(45deg) translateX(220px); }
+
+.song{
+    text-align:right;
+}
+
+.song-title{
+    font-weight:700;
+    font-size:18px;
+    color:#2f6d39;
+}
+
+.artist{
+    font-size:14px;
+    color:#6f7f70;
+    margin-top:4px;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+.progress-container{
+    width:100%;
+    height:8px;
+    background:#d9eed7;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.progress{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#6dc96f,#4caf50);
+    border-radius:20px;
+}
+
+/* =========================
+   TIME
+========================= */
+.time{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+    font-size:13px;
+    color:#6f6f6f;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:600px){
+    .card{ width:92%; padding:35px 25px; }
+    h1{ font-size:38px; }
+    .message{ font-size:15px; }
+    .player{ flex-direction:column; gap:15px; }
+    .song{ text-align:center; }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Alma 🤎</title>
+    <link rel="stylesheet" href="css/styleAlma.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="card">
+        <h1>Dear Alma 🤎</h1>
+        
+        <p class="subtitle">My wonderful and sweet friend</p>
+        
+        <div class="divider"></div>
+        
+        <p class="message">
+            Thank you for being good friend
+            <br><br>
+            and for making me laugh.
+            <br><br>
+            I hope your days are always filled with peace,
+            success, and beautiful moments.
+            <br><br>
+            love you 🤎
+        </p>
+
+        <!-- بخش پلیر (چپ‌چین برای متن انگلیسی) -->
+        <div class="player">
+            <button id="playButton" class="play-btn">▶</button>
+            <div class="song">
+                <!-- اسم آهنگ و خواننده آلما را می‌توانید اینجا بنویسید -->
+                <div class="song-title">the last of us</div>
+                <div class="artist">Gustavo Santaolalla</div>
+            </div>
+        </div>
+
+        <!-- نوار پیشرفت -->
+        <div class="progress-container">
+            <div id="progress" class="progress"></div>
+        </div>
+
+        <!-- زمان‌سنج آهنگ -->
+        <div class="time">
+            <span id="current">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+    </div>
+
+    <audio id="audio">
+        <source src="music/alma.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
